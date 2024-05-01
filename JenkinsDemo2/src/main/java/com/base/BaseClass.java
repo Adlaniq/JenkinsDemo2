@@ -15,7 +15,7 @@ public class BaseClass {
         
         if (browser.equals("chrome")) {
             // Set the path to the ChromeDriver you've downloaded
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\adlaniq\\Downloads\\chrome-headless-shell-win32\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\adlaniq\\Downloads\\chrome-headless-shell-win32\\chrome-headless-shell");
 
             // Initialize Chrome options if needed
             ChromeOptions options = new ChromeOptions();
