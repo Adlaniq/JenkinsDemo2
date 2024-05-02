@@ -15,7 +15,7 @@ public class BaseClass {
 	@BeforeMethod
 	public void setup() {
 		if (System.getProperty("browser").equalsIgnoreCase("Chrome")) {
-			WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\adlaniq\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (System.getProperty("browser").equalsIgnoreCase("Firefox")) {
 			WebDriverManager.firefoxdriver().setup();
@@ -26,12 +26,10 @@ public class BaseClass {
 		}
 		driver.manage().window().maximize();
 		driver.get(System.getProperty("url"));
-			driver.get("https://www.google.com/");
-			driver.manage().window().maximize();
 	}	
+	
 	@AfterMethod
 	public void tearDown() {
-			driver.close();
+		driver.quit();
 	}	
-
 }
